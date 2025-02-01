@@ -36,6 +36,7 @@ repos:
           [
             "-rn",
             "-sn",
+            "--ignore-patterns=.*test.*"
           ]
   - repo: https://github.com/pryorda/dockerfilelint-precommit-hooks
     rev: v0.1.0

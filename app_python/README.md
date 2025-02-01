@@ -1,5 +1,7 @@
 # Python Sample Application
 
+![workflow](https://github.com/mihdenis85/s25-core-course-labs/actions/workflows/app_python.yaml/badge.svg)
+
 ## Overview
 
 This is a simple python web application that shows current Moscow time.
@@ -45,3 +47,21 @@ Instead of docker username, use your own one.
 docker pull mihdenis85/app_python:v1.0
 docker run -p 8080:8080 mihdenis85/app_python:v1.0
 ```
+
+## CI Workflow
+
+### Setup
+
+1. CI starts with linting by `black` linter (`lint` job).
+2. Then it installs dependencies and after that it runs `pytest` (`test` job).
+
+### SNYK
+
+After two jobs above completed, `snyk_check` job runs.
+
+### Building Docker image & Deploying
+
+1. First of all the job starts with logging into Dockerhub using
+   `DOCKER_USERNAME` and `DOCKER_TOKEN` repo secrets.
+2. Then it builds and pushes an image to the Dockerhub.
+3. The build process is cached to enhance the efficiency of future pipeline executions.

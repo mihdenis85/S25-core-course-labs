@@ -15,5 +15,17 @@ and the code was statically checked by `mypy`.
 
 ## Testing
 
-I tested this application manually and compared outputs with
-[site](https://www.timeanddate.com/worldclock/russia/moscow).
+The application was evaluated using unit tests with the pytest library. 
+Three specific tests were conducted:
+
+1. Application availability
+
+   Verifies that the application is accessible and operational.
+
+2. HTML integrity
+
+   Ensures that the returned HTML is well-formed and free from errors.
+
+3. Time accuracy
+
+   Confirms that the displayed time is correct, excluding milliseconds.

@@ -1,7 +1,6 @@
 # Python Sample Application
 
-[![Build app_python](https://github.com/mihdenis85/S25-core-course-labs/actions/workflows/app_python.yaml/badge.svg)]
-(https://github.com/mihdenis85/S25-core-course-labs/actions/workflows/app_python.yaml)
+![workflow](https://github.com/mihdenis85/s25-core-course-labs/actions/workflows/app_python.yaml/badge.svg)
 
 ## Overview
 

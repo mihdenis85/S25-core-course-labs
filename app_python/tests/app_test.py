@@ -27,7 +27,7 @@ def test_time(client: FlaskClient) -> None:
     """
     response = client.get("/").text
 
-    moscow_timezone = pytz.timezone('Europe/Moscow')
+    moscow_timezone = pytz.timezone("Europe/Moscow")
     time = datetime.now(moscow_timezone)
 
     time_without_ms = str(time).split(".", maxsplit=1)[0]

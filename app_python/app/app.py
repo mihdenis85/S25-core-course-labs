@@ -16,7 +16,7 @@ def create_app():
         """
         Returns html page with current Moscow time.
         """
-        moscow_timezone = pytz.timezone('Europe/Moscow')
+        moscow_timezone = pytz.timezone("Europe/Moscow")
         time = datetime.now(moscow_timezone)
         return render_template("index.html", time=time)
 

@@ -48,6 +48,20 @@ docker pull mihdenis85/app_python:v1.0
 docker run -p 8080:8080 mihdenis85/app_python:v1.0
 ```
 
+## Unit Tests
+
+1. Application availability
+
+   Verifies that the application is accessible and operational.
+
+2. HTML integrity
+
+   Ensures that the returned HTML is well-formed and free from errors.
+
+3. Time accuracy
+
+   Confirms that the displayed time is correct, excluding milliseconds.
+
 ## CI Workflow
 
 ### Setup

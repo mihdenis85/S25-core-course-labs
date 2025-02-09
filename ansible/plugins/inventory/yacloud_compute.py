@@ -89,14 +89,12 @@ class InventoryModule(BaseInventoryPlugin, Constructable, Cacheable):
         return None
 
     def _get_clouds(self):
-        all_clouds = MessageToDict(
-            self.cloud_service.List(ListCloudsRequest())
-        )["clouds"]
+        all_clouds = MessageToDict(self.cloud_service.List(ListCloudsRequest()))[
+            "clouds"
+        ]
         if self.get_option("yacloud_clouds"):
             all_clouds[:] = [
-                x
-                for x in all_clouds
-                if x["name"] in self.get_option("yacloud_clouds")
+                x for x in all_clouds if x["name"] in self.get_option("yacloud_clouds")
             ]
         self.clouds = all_clouds
 
